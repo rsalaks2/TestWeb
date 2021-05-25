@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float:left;
-  width:20%;
-  text-align:center;
-}
-.menu a {
-  background-color:#e5e5e5;
-  padding:8px;
-  margin-top:7px;
-  display:block;
-  width:100%;
-  color:black;
-}
-.main {
-  float:left;
-  width:60%;
-  padding:0 20px;
-}
-.right {
-  background-color:#e5e5e5;
-  float:left;
-  width:20%;
-  padding:15px;
-  margin-top:7px;
-  text-align:center;
-}
-
-@media only screen and (max-width:620px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width:100%;
-  }
-}
-</style>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Reinis11b</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/stils.css">
 </head>
-<body style="font-family:Verdana;color:#aaaaaa;">
+<body>
 
-<div style="background-color:#e5e5e5;padding:15px;text-align:center;">
-  <h1>Hello World</h1>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Reinis Salaks, 11b</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#num1">Image reflection</a></li>
+        <li><a href="#num2">Transitions</a></li>
+        <li><a href="#num3">Animations</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<a id="num1"></a>
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Image reflection</h3>
+  <h3>Šis ļauj bildi attēlot spoguļattēlā : </h3>
+  <p id ="kods">koda piemērs : <br> <code>#reflectimg{ <br>-webkit-box-reflect:right; <br>}</code></p>
+  <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_image_reflection.asp" target="_blank">www.w3schools.com</a></p>
+  <img id ="reflectimg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
 </div>
 
-<div style="overflow:auto">
-  <div class="menu">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-    <a href="#">Link 4</a>
-  </div>
-
-  <div class="main">
-    <h2>Lorum Ipsum</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-  </div>
-
-  <div class="right">
-    <h2>About</h2>
-    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-  </div>
+<!-- Second Container -->
+<a id="num2"></a>
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Transitions</h3>
+  <p>Šis liek kaut kam mainīties, ja uz tā uzliek peles kursoru</p>
+  <p id ="kods">koda piemērs : <br> <code>#transimg{<br>transition: 2s;<br>}<br>#transimg:hover{<br>width: 500px;<br>height: 200px;<br>}</code></p>
+  <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">www.w3schools.com</a></p>
+  <img id ="transimg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
 </div>
 
-<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© copyright w3schools.com</div>
+<!-- Third Container (Grid) -->
+<a id="num3"> </a>
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">Animations</h3><br>
+  <p id ="kods">koda piemērs : <br> <code>#animg{<br>position: relative;<br>animation-name: example;<br>animation-duration: 5s;<br>animation-iteration-count: 30;<br>}<br>@keyframes example{<br>0%   {left:0px; top:0px;}<br>25%  {left:200px; top:0px;height:350px;width:100px;}<br>50%  {left:200px; top:200px;height:100px;width:350px;}<br>75%  {left:0px; top:200px;height:350px;width:100px;}<br>100% {left:0px; top:0px;height:350px;width:350px;}<br>}</code></p>
+  <p>Šis ļauj veidot dažādas animācijas</p>
+  <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">www.w3schools.com</a></p>
+  <img id ="animg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
+</div>
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" target="_blank">www.w3schools.com</a></p> 
+</footer>
 
 </body>
 </html>
