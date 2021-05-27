@@ -14,7 +14,7 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-default">
+<nav id ="navbar" class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -29,6 +29,7 @@
         <li><a href="#num1">Image reflection</a></li>
         <li><a href="#num2">Transitions</a></li>
         <li><a href="#num3">Animations</a></li>
+        <li><a href="#num4">Dinamisks HTML</a></li>
       </ul>
     </div>
   </div>
@@ -41,7 +42,7 @@
   <h3>Šis ļauj bildi attēlot spoguļattēlā : </h3>
   <p id ="kods">koda piemērs : <br> <code>#reflectimg{ <br>-webkit-box-reflect:right; <br>}</code></p>
   <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_image_reflection.asp" target="_blank">www.w3schools.com</a></p>
-  <img id ="reflectimg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
+  <img id ="reflectimg" src="images/marg.jpg" style="display:inline" width="350" height="350">
 </div>
 
 <!-- Second Container -->
@@ -51,7 +52,7 @@
   <p>Šis liek kaut kam mainīties, ja uz tā uzliek peles kursoru</p>
   <p id ="kods">koda piemērs : <br> <code>#transimg{<br>transition: 2s;<br>}<br>#transimg:hover{<br>width: 500px;<br>height: 200px;<br>}</code></p>
   <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_transitions.asp" target="_blank">www.w3schools.com</a></p>
-  <img id ="transimg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
+  <img id ="transimg" src="images/marg.jpg" style="display:inline" width="350" height="350">
 </div>
 
 <!-- Third Container (Grid) -->
@@ -63,10 +64,43 @@
   <p>Informācijas avots : <a href="https://www.w3schools.com/css/css3_animations.asp" target="_blank">www.w3schools.com</a></p>
   <img id ="animg" src="images/marg.jpg" style="display:inline" alt="Margrietiņa" width="350" height="350">
 </div>
+
+<a id="num4"> </a>
+<div id = "one" class="container-fluid bg-1 text-center">    
+  <h3 class="margin">Dinamisks HTML</h3><br>
+  <p>Izvēlēties laukuma izmēru <input id ="izm" style="text-align: center" ></p>
+  <input type="button" onclick="iTab(izm.value);" value="Izveidot" style="background-color: #00cb7d">
+  <table id = "this"></table>
+</div>
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" target="_blank">www.w3schools.com</a></p> 
 </footer>
-
+<script>
+window.onscroll = function() {myFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+function iTab(n){
+  let tt = document.createElement("table");
+  for(i = 0; i < n; i++){
+    r = document.createElement("TR");
+    for(ii = 0; ii< n; ii++){
+        let c = document.createElement("TD");
+        c.style ="border: 1px solid black";
+        c.innerHTML = i*n+ii+1;
+        r.appendChild(c);
+    }
+    tt.appendChild(r);
+  }
+  document.getElementById("this").appendChild(tt);
+}
+</script>
 </body>
 </html>

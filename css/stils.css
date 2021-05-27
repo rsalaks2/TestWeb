@@ -1,7 +1,22 @@
-  body {
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+body {
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
     color: #f5f6f7;
+}
+
+  #butoo, #izm{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
   }
   #reflectimg{
       -webkit-box-reflect:right;
@@ -23,8 +38,8 @@
 @keyframes example{
   0%   {left:0px; top:0px;}
   25%  {left:200px; top:0px;height:350px;width:100px;}
-  50%  {left:200px; top:200px;height:100px;width:350px;}
-  75%  {left:0px; top:200px;height:350px;width:100px;}
+  50%  {left:200px; top:0px;height:350px;width:350px;}
+  75%  {left:0px; top:0px;height:350px;width:100px;}
   100% {left:0px; top:0px;height:350px;width:350px;}
 }
   p {font-size: 16px;}
@@ -50,6 +65,9 @@
     padding-bottom: 270px;
   }
   .navbar {
+    z-index:1;
+    overflow: hidden;
+    background-color: #472e5d;
     padding-top: 15px;
     padding-bottom: 15px;
     border: 0;
@@ -61,3 +79,6 @@
   .navbar-nav  li a:hover {
     color: #1abc9c !important;
   }
+  table, td {
+    border: 1px solid black;
+}
